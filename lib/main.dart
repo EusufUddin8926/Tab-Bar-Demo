@@ -1,6 +1,16 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
+import 'Fragment/AlarmFragment.dart';
+import 'Fragment/CommentFragment.dart';
+import 'Fragment/EmailFragment.dart';
+import 'Fragment/HomeFragment.dart';
+import 'Fragment/ProfileFragment.dart';
+import 'Fragment/SearchFragment.dart';
+import 'Fragment/SettingsFragment.dart';
+import 'Fragment/TimeFragment.dart';
+
+
 void main() {
   runApp(MyApp());
 }
@@ -40,6 +50,18 @@ class TabBarDemo extends StatelessWidget {
                 Tab(icon: Icon(Icons.access_time), text: "Time")
               ],
             ),
+          ),
+          body: TabBarView(
+            children: [
+              HomeFragment(),
+              CommentFragment(),
+              ProfileFragment(),
+              EmailFragment(),
+              SearchFragment(),
+              SettingsFragment(),
+              AlarmFragment(),
+              TimeFragment()
+            ],
           ),
         ));
   }
